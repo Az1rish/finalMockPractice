@@ -31,9 +31,12 @@ function words(str) {
         }
     }
     // console.log(wordCount.toString(key, value));
+    let newContainer = []
     for (let [key, value] of Object.entries(wordCount)) {
-        console.log(`${key} = ${value}`);
+        newContainer.push(`${key} = ${value}`);
     }
+    let newString = newContainer.join(', ');
+    console.log(newString);
 }
 
 words(`"Hello there, how are you? Can you tell me how to get to the nearest Starbucks?"`);
